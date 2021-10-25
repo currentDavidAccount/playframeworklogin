@@ -1,0 +1,107 @@
+.login-panel {
+  margin: 5% 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  background-color: #C0C0C0;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.button {
+    transform: translateX(100%);
+    height: 50px;
+    width: 150px;
+    border: 3px solid green;
+    background-color: green;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.body {
+    background-color: #000000;
+}
+
+.error{
+    color: red;
+}
+
+.image-border {
+
+}
+
+.l-text {
+    font-size: 24px;
+}
+
+
+.modal-bg {
+    position: fixed;
+    top:0;
+    left 0;
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0s opacity 0.5s;
+    visibility: hidden;
+ }
+
+.bg-active {
+    visibility: visible;
+}
+
+.modal {
+   background-color: white;
+   border-radius: 10%;
+   padding: 2rem 4rem;
+   height: 10%;
+   width: 20%;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Some default button styles */
+button {font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle;}
+button {line-height: normal; *overflow: visible;}
+button {cursor: pointer; -webkit-appearance: button;}
+
+button {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #333333;
+  display: inline-block;
+  font-size: 14px;
+  line-height: normal;
+  padding: 5px 10px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+
+.button:hover, button:hover {
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+.button:focus, button:focus {
+  -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+  outline: none;
+}

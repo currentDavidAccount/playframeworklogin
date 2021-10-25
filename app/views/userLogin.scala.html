@@ -1,0 +1,62 @@
+@(
+form: Form[models.User],
+postUrl: Call
+)(implicit request: MessagesRequestHeader)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+</head>
+
+<body id="user-login" class="body">
+<div id="content">
+    <div class="login-panel">
+        <div id="user-login-form">
+
+            <h1 class="centered-text">User Login</h1>
+
+            @request.flash.data.map{ case (name, value) =>
+            <div>@name: @value</div>
+            }
+
+            @* Global errors are not tied to any particular form field *@
+            @if(form.hasGlobalErrors) {
+            @form.globalErrors.map { error: FormError =>
+            <div>
+                Error: @error.key: @error.message
+            </div>
+            }
+            }
+
+            @helper.form(postUrl, 'id -> "user-login-form") {
+
+            @helper.CSRF.formField
+
+            @helper.inputText(
+            form("username"),
+            '_label -> "Username:",
+            'placeholder -> "username",
+            'id -> "username",
+            'size -> 60,
+            '_showConstraints -> false
+            )
+
+            @helper.inputPassword(
+            form("password"),
+            '_label -> "Password:",
+            'placeholder -> "password",
+            'id -> "password",
+            'size -> 60,
+            '_showConstraints -> false
+            )
+
+            <button class="button">Login</button>
+
+            }
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

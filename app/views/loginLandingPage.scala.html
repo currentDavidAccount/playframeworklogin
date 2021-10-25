@@ -1,0 +1,21 @@
+@(logoutUrl: Call)(implicit flash: Flash)
+
+@main("Welcome to Play") {
+<body class="body">
+<div class="login-panel">
+    <h1 class="centered-text">Your In</h1>
+
+    @* show the flash message (Option 1) *@
+    <div>@flash.get("info").getOrElse("")</div>
+
+    <img src="@routes.Assets.versioned("images/success.jpg")" alt="FAILURE_TO_LOAD_IMAGE_BUT_YOU_ARE_IN_HONEST">
+
+    <div class="centered-text l-text">
+        <a href="@logoutUrl">logout</a>
+    </div>
+</div>
+</body>
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/timeout.css")">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
+}
